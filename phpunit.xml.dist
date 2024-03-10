@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/11.0/phpunit.xsd"
+   bootstrap="./tests/bootstrap.php" colors="true" processIsolation="true" stopOnFailure="true"
+   stopOnError="true" stopOnDefect="true" cacheDirectory=".phpunit.cache"
+   requireCoverageMetadata="false">
+   <!-- Test suits -->
+   <testsuites>
+      <testsuite name="Kata Unit Test Suit">
+         <directory>tests/Kata</directory>
+      </testsuite>
+   </testsuites>
+   <!-- PHP -->
+   <php>
+      <env name="APP_ENV" value="testing" />
+      <env name="XDEBUG_MODE" value="debug" />
+   </php>
+   <source>
+      <include>
+         <directory suffix=".php">src</directory>
+      </include>
+   </source>
+</phpunit>
