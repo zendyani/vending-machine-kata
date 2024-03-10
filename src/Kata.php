@@ -3,5 +3,4 @@
 namespace Kata;
 
 class Kata {
-    
 }

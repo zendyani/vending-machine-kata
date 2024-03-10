@@ -1,0 +1,7 @@
+# PHP Stan (https://phpstan.org/) config file
+# Level 8 tells PHPStan to be the strictest.
+
+parameters:
+    level: 8
+    paths:
+        - src

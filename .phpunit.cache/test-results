@@ -1,1 +1,1 @@
-{"version":1,"defects":[],"times":{"Kata\\Test\\KataTest::testWork":0.001}}
+{"version":1,"defects":{"Kata\\Test\\KataTest::testWork":8},"times":[]}
