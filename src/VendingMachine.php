@@ -7,11 +7,12 @@ class VendingMachine
 
     private array $validCoins = [1, 2, 5, 10, 20, 50, 100];
 
-    public function addCoin(int $coin)
+    public function addCoin(int $coin): bool
     {
         if(!in_array($coin, $this->validCoins)) {
             throw new \InvalidArgumentException('Coin not valid');
         }
+        return true;
     }
 
 }
