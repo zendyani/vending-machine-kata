@@ -27,5 +27,15 @@ class KataTest extends TestCase {
         $this->assertEquals(true, $result);
     }
 
+    public function testAddCoins_WithValidCoins_ShouldReturnTotalCoinsAdded() {
+        $vm = new VendingMachine();
+        $vm->addCoin(1);
+        $vm->addCoin(5);
+        $vm->addCoin(10);
+
+        $result = $vm->getBalance();
+        $this->assertEquals(16, $result);
+    }
+
 
 }
