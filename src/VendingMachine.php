@@ -42,6 +42,23 @@ class VendingMachine
         if ($this->products[$this->productName] > $this->getBalance()) {
             throw new \InvalidArgumentException(sprintf("Not enought coin for %s", $this->productName));
         }
+
+        $change = $this->getBalance() - $this->products[$this->productName];
+        $changeInCoin = [];
+        rsort($this->validCoins);
+
+        foreach ($this->validCoins as $coin) {
+            while($change >= $coin) {
+                $changeInCoin[] = $coin;
+                $change -= $coin;
+            }
+        }
+
+        $this->balance = 0;
+        $this->productName = '';
+
+        return $changeInCoin;
+
     }
 
 }

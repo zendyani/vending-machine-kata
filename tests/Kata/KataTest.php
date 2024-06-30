@@ -58,4 +58,17 @@ class KataTest extends TestCase {
         $vm->buy();
     }
 
+    public function testBuyProduct_WithEnoughCoins_ShouldReturnChange() {
+        $vm = new VendingMachine();
+
+        $vm->addCoin(50);
+        $vm->addCoin(50);
+        $vm->addCoin(10);
+        $vm->selectProduct('A');
+        $response = $vm->buy();
+
+        $this->assertEquals([10, 5], $response);
+
+    }
+
 }
