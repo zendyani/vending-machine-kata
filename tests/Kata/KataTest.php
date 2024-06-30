@@ -49,5 +49,13 @@ class KataTest extends TestCase {
         $vm->selectProduct('D');
     }
 
+    public function testBuyProduct_WithNotEnoughCoins_ShouldThrowInvalidArgumentException() {
+        $vm = new VendingMachine();
+        $this->expectException(\InvalidArgumentException::class);
+
+        $vm->addCoin(1);
+        $vm->selectProduct('A');
+        $vm->buy();
+    }
 
 }

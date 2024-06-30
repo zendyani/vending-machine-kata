@@ -13,6 +13,8 @@ class VendingMachine
         'C' => 233
     ];
 
+    private string $productName = '';
+
     public function addCoin(int $coin): bool
     {
         if(!in_array($coin, $this->validCoins)) {
@@ -30,8 +32,16 @@ class VendingMachine
         if (!array_key_exists($name, $this->products)) {
             throw new \InvalidArgumentException('Product does not exist');
         }
-        
+
+        $this->productName = $name;
+
         return true;
+    }
+
+    public function buy() {
+        if ($this->products[$this->productName] > $this->getBalance()) {
+            throw new \InvalidArgumentException(sprintf("Not enought coin for %s", $this->productName));
+        }
     }
 
 }
