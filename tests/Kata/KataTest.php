@@ -37,5 +37,11 @@ class KataTest extends TestCase {
         $this->assertEquals(16, $result);
     }
 
+    public function testSelectProduct_WithValidProduct_ShouldReturnTrue() {
+        $vm = new VendingMachine();
+        $result = $vm->selectProduct('A');
+        $this->assertEquals(true, $result);
+    }
+
 
 }
