@@ -43,5 +43,11 @@ class KataTest extends TestCase {
         $this->assertEquals(true, $result);
     }
 
+    public function testSelectProduct_WithInvalidProduct_ShouldThrowInvalidArgumentException() {
+        $vm = new VendingMachine();
+        $this->expectException(\InvalidArgumentException::class);
+        $vm->selectProduct('D');
+    }
+
 
 }
