@@ -13,7 +13,7 @@ This is a skeleton project to work on coding katas using PHP and PHPUnit. Follow
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-username/php-basic-skeleton.git
+   git clone https://github.com/zendyani/php-basic-skeleton.git
    cd php-basic-skeleton
    ```
 
