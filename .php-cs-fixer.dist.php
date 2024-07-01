@@ -37,7 +37,7 @@ return $config
             'classes_opening_brace' => 'same_line',
         ],
     ])
-    ->setIndent('    ') # 4 spaces.
+    ->setIndent('  ') # 2 spaces.
     ->setLineEnding("\n")
     ->setFinder($finder)
     ->setCacheFile(__DIR__ . '/.php-cs-fixer.cache');
